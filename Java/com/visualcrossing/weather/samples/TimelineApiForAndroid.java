@@ -125,13 +125,15 @@ public class WeatherForecastRetrieval {
                 String source = dayValue.getString("source");
                 System.out.printf("%s\t%.1f\t%.1f\t%.1f\t%s%n", datetime.format(DateTimeFormatter.ISO_LOCAL_DATE), maxtemp, mintemp, pop, source);
             }
-    }
+		}
         catch (JSONException e) {
             e.printStackTrace();
         }
     }
 }
 
+//	Main is only for demonstration. 
+//	In an android project you don't have main
 	public static void main(String[] args)  throws Exception {
 		double latitude = 53.92;
 		double longitude = -0.36
